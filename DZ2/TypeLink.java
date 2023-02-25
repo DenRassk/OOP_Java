@@ -1,19 +1,34 @@
 public enum TypeLink {
-    Spouse,             //"Супруг(а)"
-    Son,                //"Сын", 
-    Daughter,           //"Дочь", 
-    Father,             //"Папа",
-    Mother,             //"Мама", 
-    Sister,             //"Сестра", 
-    Brother,            //"Брат", 
-    GrandMother,        //"Бабушка",
-    GrandFather,        //"Дедушка", 
-    Uncle,              //"Дядя", 
-    Aunt,               //"Тетя", 
-    Niece,              //"Племянница",
-    Nephew,             //"Племянник", 
-    Grandson,           //"Внук",
-    Granddaughter       //"Внучка";
+    Spouse("cупруг(а)"),
+    Father("папа"),
+    Mother("мама"),
+    Son("cын"), 
+    Daughter("дочь"), 
+    Sister("сестра"), 
+    Brother("брат"), 
+    GrandMother("бабушка"),
+    GrandFather("дедушка"), 
+    Grandson("внук"),
+    Granddaughter("внучка"),
+    Uncle("дядя"), 
+    Aunt("тетя"), 
+    Niece("племянница"),
+    Nephew("племянник");
+    
+    private String title;
+
+    TypeLink (String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    
+    @Override
+    public String toString() {
+        return title;
+    }
     
     
 }
